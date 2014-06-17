@@ -1,0 +1,24 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body>
+  	<a href="${linkTo[UserController].add}"><p th:text="#{index.new}">Welcome to our grocery store!</p></a>
+	<ul>
+			<li>
+				<a href="${linkTo[UserController].show(user.id)}" th:text="${user.name}">${user.name}</a>
+				<form action="${linkTo[UserController].destroy(user.id)}" method="post" onsubmit="return confirm('Are you sure?');">
+					<input type="hidden" name="id" th:value="${user.id}" />
+    				<button type="submit" name="_method" value="DELETE">Remove User #${user.id}</button>
+				</form>
+			</li>
+  </ul>
+  </body>
+
+</html>
