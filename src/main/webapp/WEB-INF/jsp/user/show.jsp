@@ -10,5 +10,7 @@
 	<a href="${linkTo[UserController].index}">Users</a>
 	<a href="${linkTo[UserController].edit(model.id)}">Edit</a>
 	<div>Name: ${model.name}</div>
+	<div>Created: ${model.createdAt.time}</div>
+	<div>Updated: ${model.updatedAt.time}</div>
 </body>
 </html>

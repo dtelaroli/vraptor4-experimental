@@ -7,7 +7,7 @@
 	
 	<persistence-unit name="default">
 		
-		<class>br.com.flexait.vraptor4.User</class>
+		<class>br.com.flexait.vraptor4.model.User</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
@@ -15,7 +15,7 @@
 			<property name="javax.persistence.jdbc.user" value="sa" />
 			<property name="javax.persistence.jdbc.password" value="" />
 			
-			<property name="hibernate.dialect" value="br.com.flexait.crud.dialect.TemporaryHSQLDBDialect"/>
+			<property name="hibernate.dialect" value="br.com.flexait.cdi.dialect.TemporaryHSQLDBDialect"/>
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
