@@ -8,6 +8,7 @@
 	<persistence-unit name="default">
 		
 		<class>br.com.flexait.vraptor4.model.User</class>
+		<class>br.com.flexait.crud.model.Model</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
