@@ -1,6 +1,7 @@
 .classpath
 .settings
 .project
+.externalToolBuilders
 *.class
 target
 # Mobile Tools for Java (J2ME)

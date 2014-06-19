@@ -8,7 +8,7 @@
 	</Set>
 	<New id="BeanManager" class="org.eclipse.jetty.plus.jndi.Resource">
 		<Arg>
-			<Ref id="webAppCtx" />
+			<Ref refid="webAppCtx" />
 		</Arg>
 		<Arg>BeanManager</Arg>
 		<Arg>
