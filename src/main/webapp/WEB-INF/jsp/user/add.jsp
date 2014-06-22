@@ -7,6 +7,6 @@
 </head>
 <body>
 	<a href="${linkTo[UserController].index}">${t.get('model.list')}</a>
-	<fx:form action="${linkTo[UserController].create(model.id)}" type="post"/>
+	<fx:form action="${linkTo[UserController].create}" type="post"/>
 </body>
 </html>

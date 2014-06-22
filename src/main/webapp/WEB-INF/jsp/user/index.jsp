@@ -15,7 +15,7 @@
 			<th>${t.get('model.name')}</th>
 			<th>${t.get('model.action')}</th>
 		</tr>
-		<c:forEach var="user" items="${modelList}">
+		<c:forEach var="user" items="${userList}">
 			<tr>
 				<td><a href="${linkTo[UserController].show(user.id)}">${user.name}</a>
 				</td>
