@@ -6,8 +6,8 @@
 <title>${t.get('model.listOf')} ${t.get('model.name')}</title>
 </head>
 <body>
-	<a href="${linkTo[UserController].language('pt-BR')}">pt</a>
-	<a href="${linkTo[UserController].language('en-US')}">us</a>
+	<a href="${linkTo[LanguageController].set('pt-BR')}">pt</a>
+	<a href="${linkTo[LanguageController].set('en-US')}">us</a>
 
 	<a href="${linkTo[UserController].add}">${t.get('model.new')}</a>
 	<table>
