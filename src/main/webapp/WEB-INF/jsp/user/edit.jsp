@@ -1,15 +1,13 @@
+<%@ taglib prefix="fx" tagdir="/WEB-INF/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>${t.get('model.edit')} ${t.get('user.title')} - ${model.name}</title>
 </head>
 <body>
-	<a href="${linkTo[UserController].index}">Users</a>
-	<jsp:include page="_form.jsp">
-		<jsp:param name="action"
-			value="${linkTo[UserController].update(model.id)}" />
-		<jsp:param name="type" value="PUT" />
-	</jsp:include>
+	<a href="${linkTo[UserController].index}">${t.get('model.list')}</a>
+	
+	<fx:form action="${linkTo[UserController].update(model.id)}" type="put"/>
 </body>
 </html>

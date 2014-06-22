@@ -1,15 +1,12 @@
+<%@ taglib prefix="fx" tagdir="/WEB-INF/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>${t.get('model.new')} ${t.get('user.title')}</title>
 </head>
 <body>
-	<a href="${linkTo[UserController].index}">Users</a>
-	<jsp:include page="_form.jsp">
-		<jsp:param name="action"
-			value="${linkTo[UserController].create(model.id)}" />
-		<jsp:param name="type" value="POST" />
-	</jsp:include>
+	<a href="${linkTo[UserController].index}">${t.get('model.list')}</a>
+	<fx:form action="${linkTo[UserController].create(model.id)}" type="post"/>
 </body>
 </html>

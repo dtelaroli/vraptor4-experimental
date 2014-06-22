@@ -3,14 +3,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>${t.get('model.listOf')} ${t.get('model.name')}</title>
 </head>
 <body>
-	<a href="${linkTo[UserController].add}">New User</a>
+	<a href="${linkTo[UserController].language('pt-BR')}">pt</a>
+	<a href="${linkTo[UserController].language('en-US')}">us</a>
+
+	<a href="${linkTo[UserController].add}">${t.get('model.new')}</a>
 	<table>
 		<tr>
-			<th>Name</th>
-			<th>Action</th>
+			<th>${t.get('model.name')}</th>
+			<th>${t.get('model.action')}</th>
 		</tr>
 		<c:forEach var="user" items="${modelList}">
 			<tr>
@@ -23,7 +26,7 @@
 					</form>
 					<form style="display: inline;"
 						action="${linkTo[UserController].destroy(user.id)}" method="post"
-						onsubmit="return confirm('Are you sure?');">
+						onsubmit="return confirm('${t.get('model.confirm')}');">
 						<button name="_method" value="DELETE">X</button>
 					</form>
 				</td>
