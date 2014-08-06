@@ -7,16 +7,18 @@
 <title>${t.get('model.listOf')} ${t.get('model.name')}</title>
 </head>
 <body>
-	<a href="${linkTo[UserController].index}?_locale=pt_BR">pt</a>
-	<a href="${linkTo[UserController].index}?_locale=en_US">us</a>
-
-	<a href="${linkTo[UserController].add}">${t.get('model.new')}</a>
+	<%-- <a href="${linkTo[UserController].index}?_locale=pt_BR">pt</a>
+	<a href="${linkTo[UserController].index}?_locale=en_US">us</a> --%>
+	
+	<a href="">${linkTo[UserController].save}</a>
+	
+	<%-- <a href="${linkTo[UserController].add}">${t.get('model.new')}</a>
 	<table>
 		<tr>
 			<th>${t.get('model.name')}<br/></th>
 			<th>${t.get('model.action')}</th>
 		</tr>
-		<c:forEach var="user" items="${userList}">
+		<c:forEach var="user" items="${user}">
 			<tr>
 				<td><a href="${linkTo[UserController].show(user.id)}">${user.name}</a>
 				</td>
@@ -33,6 +35,6 @@
 				</td>
 			</tr>
 		</c:forEach>
-	</table>
+	</table> --%>
 </body>
 </html>

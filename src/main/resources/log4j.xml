@@ -29,7 +29,7 @@
 	</category>
 
 	<category name="org.jboss">
-		<priority value="INFO" />
+		<priority value="DEBUG" />
 		<appender-ref ref="stdout" />
 	</category>
 	
